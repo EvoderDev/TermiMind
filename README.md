@@ -60,20 +60,41 @@ flowchart TD
 
 ---
 
-## 📦 Installation
+## 📦 Installation & Quick Start
 
-### Via Pip (Local or Repository)
+### ⚡ 1-Click Automated Setup (Recommended)
+
+Run the single-click setup script for your operating system to automatically check Python version, provision a dedicated `.venv` environment, and install all dependencies:
+
+**Windows (PowerShell / Command Prompt):**
+```cmd
+setup.bat
+```
+
+**Linux / macOS:**
+```bash
+chmod +x setup.sh && ./setup.sh
+```
+
+---
+
+### Manual Installation (via Pip)
 
 ```bash
 # Clone the repository
 git clone https://github.com/EvoderDev/TermiMind.git
 cd TermiMind
 
-# Install package and dependencies
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies and package in editable mode
+pip install -r requirements.txt
 pip install -e .
 ```
 
-After installation, both `termimind` and its shortcut `tm` will be available in your PATH.
+After installation, both `termimind` and its shortcut `tm` are directly available in your terminal.
 
 ---
 
@@ -117,6 +138,33 @@ Restart your shell or run `source ~/.bashrc` / `source ~/.zshrc`.
 
 ## 💡 Quickstart & Usage
 
+<<<<<<< HEAD
+=======
+### 🚀 1-Click Quick Run
+
+After running `setup.bat` (Windows) or `./setup.sh` (Linux/macOS):
+
+```bash
+# Windows
+.venv\Scripts\activate
+termimind fix  # or simply 'tm'
+
+# Linux / macOS
+source .venv/bin/activate
+termimind fix  # or simply 'tm'
+```
+
+### Background Shell Listener Mode
+
+You can also run TermiMind as an active listener that monitors shell hook errors in real time:
+
+```bash
+termimind listen
+# Or with auto-execution of safe fixes:
+termimind listen --auto-fix
+```
+
+>>>>>>> 00f60c2 (feat: complete shell listener, add 1-click setup scripts and main entrypoint)
 ### Manual Trigger (`tm` or `termimind`)
 
 Run any command that fails. Then simply type `tm`:
