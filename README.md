@@ -138,8 +138,6 @@ Restart your shell or run `source ~/.bashrc` / `source ~/.zshrc`.
 
 ## 💡 Quickstart & Usage
 
-<<<<<<< HEAD
-=======
 ### 🚀 1-Click Quick Run
 
 After running `setup.bat` (Windows) or `./setup.sh` (Linux/macOS):
@@ -164,7 +162,6 @@ termimind listen
 termimind listen --auto-fix
 ```
 
->>>>>>> 00f60c2 (feat: complete shell listener, add 1-click setup scripts and main entrypoint)
 ### Manual Trigger (`tm` or `termimind`)
 
 Run any command that fails. Then simply type `tm`:
